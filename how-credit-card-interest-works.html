@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4H92TK60M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H4H92TK60M');
+</script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8703978310739425" crossorigin="anonymous"></script>
+
+<title>How Credit Card Interest Is Actually Calculated</title>
+<meta name="description" content="What APR really means month to month, how daily compounding works, and why two cards with the 'same' rate can end up costing different amounts.">
+<link rel="canonical" href="https://www.creditcardpayoff.online/how-credit-card-interest-works.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%B3%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Credit Card Payoff Planner">
+<meta property="og:title" content="How Credit Card Interest Is Actually Calculated">
+<meta property="og:description" content="What APR really means month to month, and why two cards with the 'same' rate can cost different amounts.">
+<meta property="og:url" content="https://www.creditcardpayoff.online/how-credit-card-interest-works.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How Credit Card Interest Is Actually Calculated",
+  "description": "What APR really means month to month, how daily compounding works, and why two cards with the same rate can cost different amounts.",
+  "author": { "@type": "Organization", "name": "Credit Card Payoff Planner" },
+  "datePublished": "2026-09-30"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does paying early in the billing cycle reduce my interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On cards that use the daily balance method, yes. Since interest is calculated on your balance for each day of the billing cycle, paying down a balance earlier in the cycle reduces the number of days that amount accrues interest, lowering the total charge for that statement compared to making the same payment on the due date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did I get charged interest even though I paid on time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you carried any balance past your due date in the previous cycle, you generally lose the grace period on new purchases, meaning interest can accrue from the purchase date rather than after a due date. Paying the full statement balance every month is what preserves the interest-free grace period on new purchases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a lower APR always cheaper than a higher one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally yes for the same balance and payment pattern, since APR is the primary driver of monthly interest cost. But a lower-APR card with a much larger balance can still accrue more total interest in dollar terms than a higher-APR card with a small balance, which is exactly why balance and rate both matter when deciding which card to prioritize paying down."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,500;0,9..144,600;1,9..144,420&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#142720; --ink-soft:#47564D; --paper:#F1EEE4; --paper-raised:#FFFFFF;
+    --line:#E2DDCC; --line-strong:#C7BF9F; --brass:#A07F3B; --brass-deep:#7E6329;
+    --money:#2A6B4A;
+    --radius-s:3px; --radius-m:7px;
+    --serif:"Fraunces", Georgia, "Iowan Old Style", serif;
+    --sans:"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --shadow-card: 0 1px 3px rgba(20,39,32,0.07), 0 1px 0 rgba(20,39,32,0.04);
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); height: 100%; }
+  body {
+    margin: 0; background: var(--paper);
+    background-image: radial-gradient(circle at 12% 0%, rgba(160,127,59,0.05), transparent 42%), radial-gradient(circle at 100% 18%, rgba(30,74,115,0.035), transparent 40%);
+    color: var(--ink); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; min-height: 100%;
+  }
+  .wrap { max-width: 740px; margin: 0 auto; padding: 0 18px 72px; }
+  nav.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 0 0; flex-wrap: wrap; }
+  nav.site-nav .brand { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 17px; color: var(--ink); text-decoration: none; }
+  nav.site-nav .nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+  nav.site-nav .nav-links a { font-size: 13.5px; color: var(--ink-soft); text-decoration: none; padding: 6px 0; }
+  nav.site-nav .nav-links a:hover { color: var(--brass-deep); }
+
+  header.page-hero { padding: 40px 0 20px; }
+  header.page-hero .mark { display: inline-flex; align-items: center; gap: 8px; font-family: var(--serif); font-style: italic; font-size: 13.5px; color: var(--brass-deep); margin-bottom: 14px; }
+  header.page-hero .mark::before { content: ""; width: 26px; height: 1px; background: var(--brass); display: inline-block; }
+  header.page-hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(27px, 6.5vw, 38px); line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.015em; }
+  header.page-hero .dek { color: var(--ink-soft); font-size: 16px; max-width: 58ch; margin: 0; }
+  header.page-hero .hero-rule { margin-top: 24px; height: 1px; background: linear-gradient(90deg, var(--brass) 0%, var(--line) 40%, transparent 100%); }
+
+  main h2 { font-family: var(--serif); font-weight: 500; font-size: 22px; letter-spacing: -0.01em; margin: 36px 0 10px; }
+  main h3 { font-family: var(--serif); font-weight: 500; font-size: 18px; margin: 26px 0 8px; }
+  main p, main li { color: var(--ink-soft); font-size: 15.5px; max-width: 64ch; }
+  main ul, main ol { padding-left: 20px; }
+  main li { margin: 5px 0; }
+  main strong { color: var(--ink); }
+  .lede { font-size: 17px; color: var(--ink); max-width: 62ch; }
+  .byline { font-size: 13px; color: #9A9280; margin-top: -4px; }
+
+  .example-card {
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius-m);
+    padding: 18px 20px; box-shadow: var(--shadow-card); margin: 18px 0;
+  }
+  .example-card h4 { font-family: var(--serif); font-weight: 500; font-size: 16px; margin: 0 0 10px; }
+  .example-card table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .example-card th, .example-card td { padding: 7px 8px; text-align: left; border-top: 1px solid var(--line); }
+  .example-card th { font-size: 12px; color: var(--ink-soft); font-weight: 600; }
+  .example-card .result { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line-strong); font-size: 14.5px; color: var(--ink); }
+  .example-card .steps { margin: 0; padding-left: 18px; }
+  .example-card .steps li { font-size: 14px; margin: 4px 0; }
+
+  .note-box {
+    background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius-m);
+    padding: 16px 18px; margin: 18px 0; font-size: 14px; color: var(--ink-soft);
+  }
+  .note-box strong { color: var(--ink); font-family: var(--serif); font-style: italic; font-weight: 500; }
+
+  .cta-box {
+    background: var(--paper-raised); border: 1px solid var(--line); border-left: 3px solid var(--brass);
+    border-radius: var(--radius-m); padding: 20px 22px; box-shadow: var(--shadow-card); margin: 26px 0;
+  }
+  .cta-box p { margin: 0 0 12px; color: var(--ink); font-size: 15px; }
+  .cta-box a.btn-cta {
+    display: inline-flex; align-items: center; gap: 6px; font-family: var(--sans); font-weight: 600; font-size: 14.5px;
+    background: var(--ink); color: #F3F1E6; padding: 11px 20px; border-radius: var(--radius-s); text-decoration: none;
+  }
+  .cta-box a.btn-cta:hover { background: #0B1A14; }
+
+  .faq-item { margin-bottom: 20px; }
+  .faq-item h3 { margin: 0 0 5px; }
+  .faq-item p { margin: 0; }
+
+  footer.site-footer { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 12.5px; color: #9A9280; }
+  footer.site-footer a { color: var(--brass-deep); text-decoration: none; }
+  footer.site-footer a:hover { text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="site-nav" aria-label="Site">
+    <a class="brand" href="index.html">Payoff Planner</a>
+    <div class="nav-links">
+      <a href="index.html">Calculator</a>
+      <a href="guides.html">Guides</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="mark">Debt payoff guide</div>
+    <h1>How credit card interest is actually calculated</h1>
+    <p class="dek byline">Last reviewed: September 2026</p>
+    <p class="dek">APR gets quoted as a single yearly number, but it's never charged once a year. Here's what actually happens to your balance between statements.</p>
+    <div class="hero-rule"></div>
+  </header>
+
+  <main>
+    <p class="lede">Your card's APR (annual percentage rate) is a yearly figure, but interest is calculated and added far more often than once a year — usually daily. Understanding that gap is the key to understanding why balances grow the way they do, and why two cards advertising similar rates don't always cost the same.</p>
+
+    <h2>From APR to a daily rate</h2>
+    <p>Almost all U.S. credit card issuers calculate interest using a <strong>daily periodic rate</strong>: your APR divided by 365 (or sometimes 360). A card with a 24% APR, for example, has a daily rate of roughly 0.0658%. That tiny daily percentage gets applied to your balance every single day, not just once at the end of the month.</p>
+
+    <h2>The daily balance method, step by step</h2>
+    <div class="example-card">
+      <h4>Worked example: $3,000 balance, 24% APR, 30-day billing cycle</h4>
+      <ol class="steps">
+        <li>Daily rate = 24% ÷ 365 = 0.0658%</li>
+        <li>Daily interest on day one = $3,000 × 0.0658% ≈ $1.97</li>
+        <li>If no payment is made during the cycle, this repeats for all 30 days, with each day's interest technically added to the balance it's calculated from (this is the "compounding" part)</li>
+        <li>Total interest for the cycle ≈ $60-$61, depending on the issuer's exact compounding rules</li>
+      </ol>
+      <div class="result">That ~$60 then appears as a single line item, "interest charged," on your next statement — even though it was actually computed and added in small pieces every day of the cycle.</div>
+    </div>
+
+    <h2>Why a payment mid-cycle actually matters</h2>
+    <p>Because interest accrues daily on whatever balance is currently outstanding, paying down part of your balance partway through the cycle reduces the number of days that portion accrues interest. Paying $500 toward your balance on day 5 instead of day 25 of a 30-day cycle means that $500 wasn't accruing interest for 20 extra days — a real, calculable savings, not just a feeling of being proactive.</p>
+
+    <div class="note-box">
+      <strong>Why our calculator uses monthly steps:</strong> Modeling every card's exact daily compounding, payment-posting date, and billing-cycle start would require data most people don't have handy (and some issuers don't even disclose precisely). Our calculator applies APR ÷ 12 once per month instead, which is the standard simplification used by most payoff calculators. It's a close approximation — in practice, slightly conservative, since daily compounding on a shrinking balance (as you pay it down) tends to charge marginally less than a flat monthly charge on the same starting balance.
+    </div>
+
+    <h2>Why your card issuer uses "average daily balance"</h2>
+    <p>If you make purchases or payments throughout the month, your balance isn't flat — it changes day to day. Many issuers calculate what's called the <strong>average daily balance</strong>: literally the mean of your balance across every day in the cycle, which is then what the daily rate gets applied to. This is why a big purchase early in the cycle costs more in that cycle's interest than the same purchase made the day before your statement closes — it was part of the average for more days.</p>
+
+    <h2>The grace period: how to pay zero interest on purchases</h2>
+    <p>Most credit cards offer a grace period — typically 21-25 days after your statement closes — during which new purchases accrue no interest, <strong>but only if you paid your previous statement balance in full.</strong> Carry any balance past the due date, and you generally lose the grace period on new purchases entirely, meaning interest can start accruing from the purchase date itself rather than after a due date. This is the single biggest lever for paying zero credit card interest: pay the full statement balance, every cycle, with no exceptions.</p>
+
+    <h2>Why "same APR" doesn't always mean "same cost"</h2>
+    <p>Two cards can share an identical 22% APR and still cost different amounts in practice, because of differences in: compounding frequency (daily vs. monthly), how average daily balance is computed, billing cycle length, and whether a grace period applies. For the purposes of planning a payoff, though, the APR and your starting balance are what matter most — the smaller technical differences rarely change the big picture of how long it'll take or how much total interest you'll pay.</p>
+
+    <div class="cta-box">
+      <p>Enter your real balances and APRs to see the practical bottom line: total interest and months to debt-free, without needing to do any of this math by hand.</p>
+      <a class="btn-cta" href="index.html">Run the numbers in the calculator →</a>
+    </div>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3>Does paying early in the billing cycle reduce my interest?</h3>
+      <p>On cards that use the daily balance method, yes. Since interest is calculated on your balance for each day of the billing cycle, paying down a balance earlier in the cycle reduces the number of days that amount accrues interest, lowering the total charge for that statement compared to making the same payment on the due date.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Why did I get charged interest even though I paid on time?</h3>
+      <p>If you carried any balance past your due date in the previous cycle, you generally lose the grace period on new purchases, meaning interest can accrue from the purchase date rather than after a due date. Paying the full statement balance every month is what preserves the interest-free grace period on new purchases.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is a lower APR always cheaper than a higher one?</h3>
+      <p>Generally yes for the same balance and payment pattern, since APR is the primary driver of monthly interest cost. But a lower-APR card with a much larger balance can still accrue more total interest in dollar terms than a higher-APR card with a small balance, which is exactly why balance and rate both matter when deciding which card to prioritize paying down.</p>
+    </div>
+
+    <div class="cta-box">
+      <p>Ready to see exactly what your own cards will cost you in interest?</p>
+      <a class="btn-cta" href="index.html">Go to the calculator →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>This article is for general educational purposes and isn't personalized financial advice.</p>
+    <p><a href="index.html">Calculator</a> &nbsp;·&nbsp; <a href="guides.html">Guides</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
